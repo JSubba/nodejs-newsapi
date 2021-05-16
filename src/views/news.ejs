@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header") %>
+
+    <body>
+        <div class="mt-2 mb-3 text-center display-3">Headline News Japan</div>
+        <div class="container">
+            <% if(newsData != null) { %> <% newsData.forEach(function(data) { %>
+            <div class="card shadow text-center" style="width: 22rem">
+                <div class="image">
+                    <% if(data.urlToImage != null) { %>
+                    <img
+                        src="<%- data.urlToImage %>"
+                        class="card-img-top"
+                        alt="..."
+                    />
+                    <% } else { %>
+                    <img
+                        src="/images/oops.jpg"
+                        class="card-img-top"
+                        alt="no-image"
+                    />
+                    <% } %>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text"><%- data.title %></h5>
+                    <p class="mb-0">Source: <%- data.source.name %></p>
+                    <small class="mt-0">Date: <%- data.publishedAt %></small>
+                </div>
+                <div class="card-footer div-link">
+                    <a href="<%- data.url %>" class="btn-link text-white"
+                        >Read Further</a
+                    >
+                </div>
+            </div>
+            <% }) %> <% } else { %> No posts found. <% } %> <%-
+            include('./partials/footer') %>
+        </div>
+    </body>
+</html>
