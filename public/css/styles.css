@@ -58,3 +58,11 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 640px) {
+    .card {
+        flex-basis: 45%;
+        height: 500px;
+        margin-top: 10px;
+    }
+}
