@@ -19,7 +19,6 @@ body {
 }
 .card {
     flex-basis: 24%;
-    /* flex-basis: 270px; */
     height: 450px;
     margin-top: 10px;
 }
@@ -59,9 +58,9 @@ footer {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
     .card {
-        flex-basis: 45%;
+        flex-basis: 48%;
         height: 500px;
         margin-top: 10px;
     }
